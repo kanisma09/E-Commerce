@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BTS Shop - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  
+    .popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #7c3aed;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+
+    .popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="popup" class="popup">✅ Item added to cart!</div>
+  <header class="navbar">
+    <h2>BTS Store</h2>
+    <input type="text" placeholder="Search BTS merch..." />
+    <div class="nav-buttons">
+      <a href="cart.html">🛒</a>
+      <a href="login.html" class="logout">Logout</a>
+    </div>
+  </header>
+
+
+  <section class="products-section">
+    <h1>Featured BTS Products</h1>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/jin plush.jpeg" alt="Product 1" />
+        <h3>Jin Plush Toy</h3>
+        <p>₹1099</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/jm keychain.jpeg" alt="Product 2" />
+        <h3>Jimin Keychain</h3>
+        <p>₹750</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/v poster.jpeg" alt="Product 3" />
+        <h3>V Poster</h3>
+        <p>₹300</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/rm photo.jpeg" alt="Product 4" />
+        <h3>RM Photocard</h3>
+        <p>₹200</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/suga.jpeg" alt="Product 5" />
+        <h3>Suga Bracelet</h3>
+        <p>₹1199</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/jhope hoodie.jpeg" alt="Product 6" />
+        <h3>J-Hope Hoodie</h3>
+        <p>₹2099</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/jk chain.jpeg" alt="Product 7" />
+        <h3>Jk chain </h3>
+        <p>₹1099</p>
+        <button onclick="showPopup()">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <script>
+    function showPopup() {
+      const popup = document.getElementById('popup');
+      popup.classList.add('show');
+
+      setTimeout(() => {
+        popup.classList.remove('show');
+      }, 2000); 
+    }
+  </script>
+</body>
+</html>
